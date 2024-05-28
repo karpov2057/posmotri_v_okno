@@ -40,7 +40,7 @@ ol {
 .content {
   display: grid;
   grid-template-columns: 711px 1fr;
-  align-items: end;
+  align-items: flex-end;
   gap: 30px;
   max-width: 1140px;
   padding: 133px 30px;
@@ -50,7 +50,6 @@ ol {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  margin-top: 75px;
 }
 
 .result__video-container {
@@ -71,7 +70,7 @@ ol {
   align-items: start;
 }
 
-input:focus {
+.search-form__textfield:focus {
   outline: none;
 }
 
@@ -89,14 +88,17 @@ input:focus {
   line-height: 22px;
 }
 
-.search-form__label:has(:focus-visible) {
+.search-form__label {
   display: flex;
   align-items: center;
   gap: 5px;
   width: fit-content;
   cursor: pointer;
+}
+
+.search-form__label:has(:focus-visible) {
   outline: 1px solid #fff;
-  outline-offset: 2px;
+  outline-offset: 1px;
 }
 
 .search-form__label-text {
@@ -105,6 +107,10 @@ input:focus {
   font-weight: 400;
   font-size: 18px;
   line-height: 22px;
+}
+
+.search-form__label-text:hover {
+  text-decoration: underline;
 }
 
 .visually-hidden {
@@ -136,6 +142,7 @@ input:focus {
   display: flex;
   flex-direction: row;
   gap: 15px;
+  
 }
 
 .search-form__checkbox {
@@ -162,8 +169,25 @@ input:focus {
   line-height: 22px;
 }
 
+.button:focus {
+  outline: none;
+}
+
+.button:focus-visible {
+  outline: 1px solid #fff;
+  outline-offset: 1px;
+}
+
+.button:hover {
+  text-decoration: underline;
+}
+
+.button:active {
+  background-color: #545050;
+}
+
 .search-form__submit-button {
-  margin-top: 15px;
+  align-self: flex-end;
   padding: 6px 73.5px;
 }
 
@@ -192,26 +216,7 @@ input:focus {
   position: relative;
   block-size: 298px;
   overflow-y: scroll;
-}
-
-.preloader-template {
-
-}
-
-.preloader {
-
-}
-
-.preloader-chasing-squares {
-
-}
-
-.square {
-
-}
-
-.cards-list-item-template {
-
+  padding-top: 4px;
 }
 
 .content__list-item:not(:last-child) {
@@ -219,8 +224,20 @@ input:focus {
 }
 
 .content__card-link {
+  display: block;
+  width: 99%;
+  margin-left: 3px;
   color: #fff;
   text-decoration: none;
+}
+
+.content__card-link_current:focus {
+  outline: none;
+}
+
+.content__card-link_current:focus-visible {
+  outline: 1px solid #fff;
+  out
 }
 
 .content__video-card {
@@ -229,8 +246,19 @@ input:focus {
   align-items: flex-start;
 }
 
+.content__video-card:active {
+  background-color: #545050;
+}
+
 .content__video-card-description-container {
+  margin-top: 6px;
   width: 100%;
+}
+
+.content__card-link:hover {
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  text-decoration-thickness: 1px;
 }
 
 .content__video-card-title {
@@ -255,10 +283,8 @@ input:focus {
   object-position: center;
 }
 
-.more-button-template {
-
-}
-
 .more-button {
-  width: 100%;
+  margin-left: 2px;
+  margin-bottom: 2px;
+  width: 99%;
 }
