@@ -9,6 +9,9 @@ html {
 }
 
 .page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   inline-size: 1200px;
   block-size: 100%;
   margin: auto;
@@ -42,8 +45,8 @@ ol {
   grid-template-columns: 711px 1fr;
   align-items: flex-end;
   gap: 30px;
-  max-width: 1140px;
-  padding: 133px 30px;
+  width: 100%;
+  margin: 0 30px;
 }
 
 .result {
@@ -129,6 +132,7 @@ ol {
   font-weight: 400;
   font-size: 18px;
   line-height: 22px;
+  color: inherit;
   width: 225px; /*попробовать inline-size или типа этого*/
   background-color: transparent;
   border-top: 1px solid #fff;
@@ -150,11 +154,17 @@ ol {
 }
 
 .search-form__pseudo-checkbox {
-  display: inline-block;
+  display: block;
   width: 19px;
   height: 19px;
   background-color: inherit;
   border: 1px solid #fff;
+}
+
+.search-form__checkbox:checked + .search-form__pseudo-checkbox {
+  background-color: #fff;
+  width: 15px;
+  height: 15px;
 }
 
 .button {
@@ -216,7 +226,6 @@ ol {
   position: relative;
   block-size: 298px;
   overflow-y: scroll;
-  padding-top: 4px;
 }
 
 .content__list-item:not(:last-child) {
@@ -226,18 +235,21 @@ ol {
 .content__card-link {
   display: block;
   width: 99%;
-  margin-left: 3px;
+  margin: 2px;
   color: #fff;
   text-decoration: none;
 }
 
-.content__card-link_current:focus {
+.content__card-link:focus {
   outline: none;
 }
 
-.content__card-link_current:focus-visible {
+.content__card-link:focus-visible {
   outline: 1px solid #fff;
-  out
+}
+
+.content__card-link_current {
+  background-color: #545050;
 }
 
 .content__video-card {
@@ -251,8 +263,7 @@ ol {
 }
 
 .content__video-card-description-container {
-  margin-top: 6px;
-  width: 100%;
+  width: 200px;
 }
 
 .content__card-link:hover {
@@ -268,6 +279,9 @@ ol {
   line-height: 100%;
   text-transform: uppercase;
   padding-bottom: 6px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .content__video-card-description {
