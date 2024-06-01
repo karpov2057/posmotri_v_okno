@@ -45,7 +45,7 @@ ol {
   grid-template-columns: 711px 1fr;
   align-items: flex-end;
   gap: 30px;
-  width: 100%;
+  width: 1140px;
   margin: 0 30px;
 }
 
@@ -58,7 +58,7 @@ ol {
 .result__video-container {
   display: flex;
   position: relative;
-  block-size: 389px;
+  block-size: 386px;
   inline-size: 711px;
 }
 
@@ -87,7 +87,7 @@ ol {
 }
 
 .search-form__fieldset-title {
-  font-family: 'Fira Sans Condensed';
+  font-family: 'Fira Sans Condensed', sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 22px;
@@ -107,7 +107,7 @@ ol {
 }
 
 .search-form__label-text {
-  font-family: 'Fira Sans Condensed';
+  font-family: 'Fira Sans Condensed', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -125,7 +125,7 @@ ol {
 }
 
 .search-form__textfield {
-  font-family: 'Fira Sans Condensed';
+  font-family: 'Fira Sans Condensed', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -168,18 +168,12 @@ ol {
   text-underline-offset: 3px;
 }
 
-.search-form__label:focus-visible {
-  outline: 1px solid #fff;
-  outline-offset: 1px;
-}
-
 .button {
   background-color: transparent;
   border: 1px solid #fff;
   cursor: pointer;
   color: #fff;
-  height: 34px;
-  font-family: 'Fira Sans Condensed';
+  font-family: 'Fira Sans Condensed', sans-serif;
   font-weight: 700;
   font-size: 18px;
   line-height: 22px;
@@ -217,7 +211,7 @@ ol {
 }
 
 .title {
-  font-family: Oswald;
+  font-family: Oswald, sans-serif;
   font-size: 75px;
   font-weight: 700;
   line-height: 94%;
@@ -231,11 +225,11 @@ ol {
 .content__list {
   position: relative;
   block-size: 298px;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 .content__list-item:not(:last-child) {
-  padding-bottom: 32px;
+  margin-bottom: 30px;
 }
 
 .content__card-link {
@@ -244,6 +238,10 @@ ol {
   margin: 2px;
   color: #fff;
   text-decoration: none;
+}
+
+.content__card-link:active {
+  background-color: #545050;
 }
 
 .content__card-link:focus {
@@ -269,24 +267,14 @@ ol {
   width: 200px;
 }
 
-.content__card-link:hover .content__video-card-title {
-  text-decoration: underline;
-  text-underline-offset: 6px;
-  text-decoration-thickness: 2px;
-}
-
-.content__card-link:hover .content__video-card-description {
+.content__card-link:hover {
   text-decoration: underline;
   text-underline-offset: 6px;
   text-decoration-thickness: 1px;
 }
 
-.content__video-card:active {
-  background-color: #545050;
-}
-
 .content__video-card-title {
-  font-family: Oswald;
+  font-family: Oswald, sans-serif;
   font-size: 30px;
   font-weight: 700;
   line-height: 100%;
@@ -295,10 +283,11 @@ ol {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+  padding-top: 2px;
 }
 
 .content__video-card-description {
-  font-family: 'Fira Sans Condensed';
+  font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 16px;
@@ -315,4 +304,5 @@ ol {
   margin-left: 2px;
   margin-bottom: 2px;
   width: 99%;
+  padding: 6px 0;
 }
